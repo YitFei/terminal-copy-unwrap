@@ -2,5 +2,7 @@
   "name": "copycmd",
   "version": "0.1.0",
   "description": "/copycmd: unwrap text copied from the Claude Code TUI (hard wraps, indent, markers) back onto the clipboard",
-  "author": { "name": "Yif" }
+  "author": { "name": "Yif" },
+  "license": "MIT",
+  "repository": "https://github.com/YitFei/terminal-copy-unwrap"
 }
