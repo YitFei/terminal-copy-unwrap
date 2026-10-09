@@ -52,3 +52,7 @@ claude plugin test plugin                # plugin
 claude plugin validate .                 # marketplace + plugin
 claude --plugin-dir plugin               # run the plugin from this folder
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE).
