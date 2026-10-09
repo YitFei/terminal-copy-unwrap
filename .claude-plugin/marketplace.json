@@ -1,0 +1,12 @@
+{
+  "name": "terminal-copy-unwrap",
+  "owner": { "name": "Yif" },
+  "description": "Fix text copied from the Claude Code TUI: hard wraps, indent, markers",
+  "plugins": [
+    {
+      "name": "copycmd",
+      "source": "./plugin",
+      "description": "/copycmd: unwrap text copied from the Claude Code TUI back onto the clipboard"
+    }
+  ]
+}

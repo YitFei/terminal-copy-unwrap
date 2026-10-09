@@ -1,0 +1,4 @@
+__pycache__/
+.claude-plugin/types/
+plugin/.claude-plugin/types/
+.claude/
