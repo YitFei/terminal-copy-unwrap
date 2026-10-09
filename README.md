@@ -2,6 +2,8 @@
 
 Copy text out of Claude Code without broken lines. Select, copy, type `/cp`, paste.
 
+![copycmd demo](docs/demo.gif)
+
 ## The problem
 
 Claude Code's terminal UI hard-wraps long lines at the terminal width and indents its
