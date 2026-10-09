@@ -1,7 +1,29 @@
 # copycmd
 
-Claude Code hard-wraps long lines at terminal width and indents its output by 2 spaces,
-so a copied command breaks when pasted into a shell. `copycmd` fixes the clipboard in place.
+Copy text out of Claude Code without broken lines. Select, copy, type `/cp`, paste.
+
+## The problem
+
+Claude Code's terminal UI hard-wraps long lines at the terminal width and indents its
+output by 2 spaces. Those are real newlines and spaces, so they end up in your clipboard.
+What looks like one line on screen pastes as several:
+
+```
+  Command / action: echo "copycmd demo: this long command was hard-wrapped by the Claude Code TUI" && echo "step 1: joined
+  back into one line by /cp" && echo "all done, it runs"
+```
+
+Pasting text like that elsewhere breaks things:
+
+- **Shell / SSH**: the command runs in pieces: `command not found`,
+  `syntax error near unexpected token '&&'`, or half a command running on a server
+- **YAML, Python, config files**: the extra indent and line breaks cause parse errors
+- **URLs and long tokens**: split in the middle, so the link no longer works
+- **Chat, docs, issues, commit messages**: a paragraph turns into short broken lines
+
+Fixing it by hand means deleting every line break and indent. `copycmd` does it for you:
+it joins the wrapped lines, removes the indent and the `⏺` / `⎿` markers, and puts the
+result back on the clipboard.
 
 Two ways to run it, same logic:
 
